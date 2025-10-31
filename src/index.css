@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#praspactive {
+    perspective: 1400px;
+    color: rgba(255, 255, 255, 0.384);
+}
+
+@theme {
+  --color-lbg: #F7FAFF; /* Default (light) background */
+  --color-lsurface: #FFFFFF;
+  --color-lprimary: #0B63FF;
+  --color-lsecondary: #0A8FFF;
+  --color-ltext: #0B1B2B;
+  --color-lmuted: #64748B;
+
+  --color-dbg: #081229;
+  --color-dsurface: #0B1420;
+  --color-dprimary: #4EA1FF;
+  --color-dsecondary: #86C7FF;
+  --color-dtext: #E6F0FF;
+  --color-dmuted: #9FB6CD;
+}
