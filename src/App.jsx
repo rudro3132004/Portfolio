@@ -45,7 +45,7 @@ export default function App() {
         {/* Page Content with padding-top so Navbar doesn't overlap */}
         <div className="pt-[80px] ">
           <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route path="/Portfolio" element={<Homepage />} />
             <Route path="/skills" element={<SkillsPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />

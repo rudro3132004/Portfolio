@@ -19,7 +19,7 @@ export default function Navbar() {
      className="flex justify-between items-center p-2 px-4 shadow-lg   md:px-12 lg:px-[10%] lg:py-1 text-lbg bg-lsecondary dark:bg-lprimary">
 
         <div className="cursor-pointer font-semibold text-2xl  md:text-3xl hover:text-white/80 duration-300">
-            <NavLink to="/">Dev.Rudro</NavLink>
+            <NavLink to="/Portfolio">Dev.Rudro</NavLink>
         </div>
 
         {/* Navigator pc size*/}

@@ -3,6 +3,9 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 import portfolioImage from "../assets/portfolio.png";
+import blogImage from "../assets/blog.png";
+import todoImage from "../assets/todo.png";
+import wathchImage from "../assets/wather.png";
 
 gsap.registerPlugin(SplitText);
 
@@ -43,29 +46,39 @@ export default function ProjectsPage() {
       title: "My Portfolio Website",
       type: "Frontend",
       description:
-        "A modern, responsive portfolio website showcasing my projects and skills.",
+        "A personal portfolio website to showcase my projects and skills.",
       technologies: ["React", "Tailwind", "Motion", "GSAP", " Lenis"],
-      link: "https://example.com",
+      link: "https://rudro3132004.github.io/Portfolio/",
     },
     {
       id: 2,
-      image: "https://via.placeholder.com/600x400",
-      title: "Portfolio Website",
+      image: blogImage,
+      title: "Blog Website",
       type: "Frontend",
       description:
-        "A sleek and animated personal portfolio website built with Next.js, GSAP, and Tailwind.",
-      technologies: ["Next.js", "GSAP", "Tailwind"],
-      link: "https://example.com",
+        "A clean and minimal blog website to share articles and tutorials.",
+      technologies: ["React", "Tailwind", "Motion", " Lenis", "react icon", "swiper"],
+      link: "https://rudro3132004.github.io/Blog",
     },
     {
       id: 3,
-      image: "https://via.placeholder.com/600x400",
-      title: "Blog Platform",
-      type: "MERN",
+      image: todoImage,
+      title: "Todo App",
+      type: "Frontend",
       description:
-        "A blogging system with secure user authentication and an admin dashboard.",
-      technologies: ["MongoDB", "Express", "React", "Node.js"],
-      link: "https://example.com",
+        "A simple and effective Todo application to manage daily tasks.",
+      technologies: ["React", "Tailwind", "Motion", "React-icon"],
+      link: "https://rudro3132004.github.io/Todo/",
+    },
+    {
+      id: 4,
+      image: wathchImage,
+      title: "Weather App",
+      type: "Frontend",
+      description:
+        " A weather application that provides real-time weather updates for any location.",
+      technologies: ["React", "Tailwind", "Motion", "React-icon", "axios", "react-hot-toast"],
+      link: "https://rudro3132004.github.io/WatherApp/",
     },
   ];
 
@@ -73,7 +86,7 @@ export default function ProjectsPage() {
     <div
       ref={sectionRef}
       className="w-full h-fit md:py-20 flex flex-col items-center justify-center"
-    >
+    > 
       {/* Section Heading */}
       <div className="flex justify-center items-center mb-16">
         <h1
@@ -99,7 +112,7 @@ export default function ProjectsPage() {
                 isEven ? "md:order-2 justify-end" : "md:order-1 justify-start"
               }`}
             >
-              <div className="relative h-[200px] md:h-[350px] w-full max-w-[620px] aspect-video rounded-xl overflow-hidden bg-black shadow-2xl border-2 border-gray-300 dark:border-gray-700">
+              <div className="relative h-[200px] md:h-[320px] w-full max-w-[650px] aspect-video rounded-xl overflow-hidden bg-black shadow-2xl border-2 border-gray-300 dark:border-gray-700">
                 {/* Fake laptop top bar */}
                 <div className="absolute top-0 left-0 w-full h-6 bg-gray-800 flex items-center px-3 gap-2 z-10">
                   <span className="w-3 h-3 rounded-full bg-red-500"></span>
@@ -108,11 +121,13 @@ export default function ProjectsPage() {
                 </div>
 
                 {/* Project Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
+                <a href={project.link}>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                </a>
 
                 {/* Hover Overlay */}
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 to-black/60 flex items-center justify-center opacity-0 -translate-y-full group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">

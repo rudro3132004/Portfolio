@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navigator({setPopnav}) {
   const navItems = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/Portfolio" },
     { name: "Skills", path: "/skills" },
     { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
